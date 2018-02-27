@@ -1,0 +1,6 @@
+<h1> Contacts </h1>
+<%= link_to 'Create A New Contact', new_contact_path %>
+<% @contacts.each do |contact| %>
+  <h2><%= contact.name %></h2>
+  <%= link_to 'Show Contact', contact_path(contact) %>
+<% end %>
