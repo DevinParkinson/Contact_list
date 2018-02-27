@@ -2,5 +2,7 @@
 <%= link_to 'Create A New Contact', new_contact_path %>
 <% @contacts.each do |contact| %>
   <h2><%= contact.name %></h2>
-  <%= link_to 'Show Contact', contact_path(contact) %>
+  <%= link_to 'See Details', contact_path(contact) %>
+  <%= link_to 'Edit Details', edit_contact_path(contact) %>
+  <%= link_to 'Remove Contact', contact, method: :delete %>
 <% end %>
